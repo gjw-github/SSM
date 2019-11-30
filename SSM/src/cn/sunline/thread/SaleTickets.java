@@ -20,7 +20,6 @@ class Tickets {
 			lock.unlock();
 		}
 	}
-	
 }
 
 public class SaleTickets {
