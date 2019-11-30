@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+  PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+  "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+  
+<generatorConfiguration>
+
+  <context id="MySqlTables" targetRuntime="MyBatis3Simple">
+    <!--注释生成配置  -->
+    <commentGenerator>
+       <!--不生成注释  -->
+       <property name="suppressAllComments" value="true"/>
+       <!--不生成注释中的日期  -->
+       <property name="suppressDate" value="true" />
+    </commentGenerator>
+  
+    <jdbcConnection 
+        driverClass="com.mysql.jdbc.Driver"
+        connectionURL="jdbc:mysql://localhost:3306/test"
+        userId="root"
+        password="123456">
+    </jdbcConnection>
+
+    <!--类型解析器  -->
+    <javaTypeResolver >
+      <!--是否强制转换成BigDecimal,一般为否 value="false" -->
+      <property name="forceBigDecimals" value="false" />
+    </javaTypeResolver>
+
+    <!--生成对应的实体类  -->
+    <javaModelGenerator targetPackage="cn.sunline.ssm.bean"
+                        targetProject=".\src">
+                        <!--不将数据库名生成子包  -->
+				        <property name="enableSubPackages" value="false" />
+				        <!--字符串字段去空设置  -->
+				        <property name="trimStrings" value="false" />
+    </javaModelGenerator>
+
+    <!--生成XXXMapper.xml配置  -->
+    <sqlMapGenerator targetPackage="cn.sunline.ssm.dao"  
+                     targetProject=".\src">
+                    <property name="enableSubPackages" value="false" />
+    </sqlMapGenerator>
+
+    <!--生成XXXMapper接口配置  -->
+    <javaClientGenerator type="XMLMAPPER" 
+                         targetPackage="cn.sunline.ssm.dao"  
+                         targetProject=".\src">
+                         <property name="enableSubPackages" value="false" />
+    </javaClientGenerator>
+
+    <table tableName="tbl_cust" domainObjectName="Customer"></table>
+  </context>
+</generatorConfiguration>
