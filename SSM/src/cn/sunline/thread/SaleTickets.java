@@ -27,8 +27,6 @@ public class SaleTickets {
 	public static void main(String[] args) {
 		Tickets tickets = new Tickets();
 		//Lambda表达式
-		//456
-		//123
 		new Thread(() -> {for (int i = 1; i <= 100; i++) tickets.saleTickets();},"线程A").start();
 		new Thread(() -> {for (int i = 1; i <= 100; i++) tickets.saleTickets();},"线程B").start();
 		new Thread(() -> {for (int i = 1; i <= 100; i++) tickets.saleTickets();},"线程C").start();
