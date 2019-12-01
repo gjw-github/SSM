@@ -26,6 +26,7 @@ class Tickets {
 /**
 * 线程操作资源类
 * 高类聚+低耦合
+* 题目：3个线程卖100张票
 * @author guang
 */
 public class SaleTickets {
