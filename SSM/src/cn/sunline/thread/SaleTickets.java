@@ -3,6 +3,7 @@ package cn.sunline.thread;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
+//资源类
 class Tickets {
 	
 	private volatile int tickets = 100;
