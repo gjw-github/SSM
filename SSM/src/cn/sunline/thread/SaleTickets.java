@@ -22,6 +22,9 @@ class Tickets {
 	}
 }
 
+/**
+  线程操作资源类
+*/
 public class SaleTickets {
 
 	public static void main(String[] args) {
