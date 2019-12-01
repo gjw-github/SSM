@@ -23,11 +23,10 @@ class Tickets {
 }
 
 /**
- * 线程操作资源类
- * 高类聚+低耦合
- * @author ASUS
- *
- */
+* 线程操作资源类
+* 高类聚+低耦合
+* @author guang
+*/
 public class SaleTickets {
 
 	public static void main(String[] args) {
