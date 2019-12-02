@@ -4,7 +4,7 @@ import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
-//资源数据类
+//多线程操作资源类
 class ShareData {
 	
 	private int number = 0;
