@@ -43,8 +43,7 @@ class ShareData {
 			lock.unlock();
 		}
 	}
-			
-		
+	
 }
 
 /**
